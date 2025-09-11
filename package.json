@@ -1,0 +1,21 @@
+{
+  "name": "node",
+  "version": "1.1.1",
+  "description": "this is backend",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "data.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "lodash": "^4.17.21",
+    "morgan": "^1.10.1"
+  }
+}
