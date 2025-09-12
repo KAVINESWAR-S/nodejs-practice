@@ -76,6 +76,18 @@ app.get("/api/products/:id",(req,res)=>{
     return res.status(400).send({msg:"user not found"})
 })
 
+app.use(express.json());
+
+app.post("/api/users",(req,res)=>{
+    console.log(req.body);
+    const {body}=req;
+    const newUser ={id:users[users.length-1].id+1, ...body}
+    users.push(newUser);
+    return res.status(201).send(newUser);
+})
+
+
+
 app.listen(PORT,()=>{
     console.log(`APP is running on ${PORT}`);
 })
